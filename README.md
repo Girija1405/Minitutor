@@ -1,83 +1,44 @@
-📚 MiniTutor – AI Learning Platform for Kids (Ages 4–10)
-🎓 About the Project
-MiniTutor is a fun, gamified learning platform designed for children in grades 4 to 10. It offers a guided educational journey through lessons, quizzes, activities, curiosity facts, and a chatbot to clear doubts. The app is simple, interactive, and can be extended with real AI/ML features.
+# MiniTutor
 
-🚀 Features
-Section	Description
-🏠 Login Page	Child enters their name, age, and selects a subject.
-📘 Lesson Page	Offers topic-wise chapters with options like reading, watching videos, or summaries.
-📝 Quiz / Curiosity Corner	Fun quizzes or random facts to spark curiosity.
-🎨 Activity Zone	Hands-on tasks like drawing, singing, or photography.
-🏅 Progress Page	Displays badges, percentage completion, and trackable progress.
-🤖 MiniTutor ChatBot	Answers kids' questions using simple predefined AI-like logic.
+MiniTutor is an interactive web-based learning platform designed for children aged 4 to 10. It provides an engaging environment for learning through lessons, quizzes, fun activities, and interactive stories.
 
-🧠 Technologies Used
-HTML5 – Structure
+## Features
 
-CSS3 – Styling and animations
+- Personalized dashboard for each student
+- Subject-based lessons in Science, Math, Social Studies, GK, and Computer Science
+- Curiosity Corner with fun facts and mini quizzes
+- Activity Zone with creative offline and online tasks
+- Progress Tracker to monitor learning achievements
+- AI-powered chatbot for clearing doubts
 
-JavaScript – Logic, navigation, localStorage
+## Technologies Used
 
-localStorage API – Save user data across pages
+- HTML, CSS, JavaScript
+- LocalStorage for user data handling
+- Simple DOM-based navigation between pages
 
-(Optional upgrades: AI integration, voice recognition, server-side analytics)
+## How to Use
 
-📁 File Structure
-bash
-Copy
-Edit
-MiniTutor/
-│
-├── index.html             # Welcome/Login page
-├── dashboard.html         # Main dashboard with feature cards
-├── lesson.html            # Lesson content by chapters
-├── curiosity.html         # Fun facts / quizzes
-├── activity.html          # Interactive activities
-├── progress.html          # User progress tracker
-├── chatbot.html           # Friendly chatbot assistant
-└── README.md              # This file
-🧩 How Pages Are Connected
-On index.html, once the student enters details, they are stored in localStorage.
+1. Open `index.html` to enter your name, age, and subject.
+2. You will be redirected to the main dashboard.
+3. Choose an option like Lesson, Quiz, Activity, or Progress.
+4. Enjoy the learning journey with guided steps.
 
-Then redirected to dashboard.html, which reads the name and displays a personalized greeting.
+## Setup
 
-From the dashboard, students can click on:
+Simply open `index.html` in a web browser. No additional setup is required.
 
-lesson.html
+## Project Structure
 
-curiosity.html
+- `index.html` – Login page
+- `dashboard.html` – Main dashboard
+- `lesson.html` – Lesson interface
+- `quiz.html` – Curiosity quiz page
+- `activity.html` – Activities
+- `progress.html` – Progress tracking
+- `chatbot.html` – AI chatbot
+- `style.css` – Styling for all pages
 
-activity.html
+## License
 
-progress.html
-
-chatbot.html
-
-🛠️ How to Run
-No installation needed! Just open index.html in your browser.
-
-Or Use Live Preview (in VS Code):
-Install Live Server extension.
-
-Right-click on index.html → Open with Live Server
-
-📌 Future Improvements
-🔊 Text-to-speech for narration
-
-🎤 Voice-based chatbot using AI
-
-📊 Backend with student analytics
-
-🧠 Real ML model to personalize recommendations
-
-🏆 Gamification: coins, stars, achievements
-
-🤝 Contributors
-💡 Idea & Design: You (Girija)
-
-💻 Code: You + ChatGPT Assistance
-
-🎨 UI/UX: Comic-style visuals and child-friendly interaction
-
-💬 License
-This project is for educational and personal use. No commercial distribution without permission.
+This project is for educational purposes only.
