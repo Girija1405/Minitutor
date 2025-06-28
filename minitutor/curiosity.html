@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🧠 Curiosity Corner</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background: linear-gradient(to bottom right, #fceabb, #f8b500);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      color: #f57c00;
+      font-size: 2.5em;
+      margin-top: 20px;
+    }
+
+    .fact-box {
+      background: #fff8e1;
+      border: 3px solid #ffb300;
+      border-radius: 20px;
+      padding: 25px 30px;
+      max-width: 600px;
+      margin: 30px auto;
+      font-size: 1.3em;
+      color: #333;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+      background-color: #f57c00;
+      color: white;
+      border: none;
+      padding: 15px 35px;
+      font-size: 1.1em;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ef6c00;
+    }
+
+    .emoji {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Curiosity Corner</h1>
+  <div class="fact-box" id="fact-box">
+    Loading your fun fact...
+  </div>
+  <button onclick="showRandomFact()">🔁 Surprise Me!</button>
+
+  <script>
+    const facts = [
+      "🌍 Earth is the only planet not named after a god.",
+      "🔢 Zero was invented in India!",
+      "🐘 An elephant’s trunk has over 40,000 muscles.",
+      "🧪 Water can boil and freeze at the same time!",
+      "🌌 Light from stars takes years to reach us!",
+      "📚 The longest word in English has 189,819 letters.",
+      "🧠 Your brain is sometimes more active while you sleep!",
+      "🦋 Butterflies taste with their feet!",
+      "📐 The number π (pi) goes on forever without repeating.",
+      "🌕 The moon has moonquakes just like earthquakes!",
+      "🦕 Dinosaurs lived on Earth for 165 million years!",
+      "🚀 NASA’s Voyager 1 is the farthest human-made object from Earth.",
+      "🦈 Sharks existed before trees!",
+      "🕵️‍♂️ Your fingerprints form before you're born!",
+      "⚡ The electric eel can produce up to 600 volts!",
+      "🎵 Sound travels 4x faster in water than in air.",
+      "🌈 No two people see the same rainbow!"
+    ];
+
+    function showRandomFact() {
+      const factBox = document.getElementById("fact-box");
+      const randomFact = facts[Math.floor(Math.random() * facts.length)];
+      factBox.innerHTML = randomFact;
+    }
+
+    // Show a random fact as soon as the page loads
+    window.onload = showRandomFact;
+  </script>
+</body>
+</html>

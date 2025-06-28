@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MiniTutor – Dashboard</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background: linear-gradient(to bottom right, #fceabb, #f8b500);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .card {
+      background-color: #ffecb3;
+      padding: 25px 20px;
+      margin: 15px auto;
+      border-radius: 15px;
+      border: 2px solid #f57c00;
+      cursor: pointer;
+      font-size: 1.3em;
+      font-weight: bold;
+      width: 100%;
+      max-width: 350px;
+      transition: background 0.3s ease;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      background-color: #ffe082;
+    }
+
+    h2 {
+      color: #f57c00;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 id="greeting">👋 Welcome!</h2>
+    <p>Select what you'd like to do today:</p>
+
+    <div class="card" onclick="goTo('lesson.html')">📘 Start a Lesson</div>
+    <div class="card" onclick="goTo('curiosity.html')">🧠 Curiosity Corner</div>
+    <div class="card" onclick="goTo('act.html')">🎨 Fun Activities</div>
+    <div class="card" onclick="goTo('progess.html')">🏅 Your Progress</div>
+  </div>
+
+  <script>
+    function goTo(page) {
+      window.location.href = page;
+    }
+
+    // Personalized greeting from localStorage
+    const name = localStorage.getItem("name");
+    if (name) {
+      document.getElementById("greeting").textContent =
+        `👋 Hello, ${name}! Welcome to your Learning Dashboard.`;
+    }
+  </script>
+</body>
+</html>

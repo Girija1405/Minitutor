@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lesson Hub</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffeaa7, #fab1a0);
+      color: #2d3436;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      background-color: #f0932b;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-icon {
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #ffeaa7;
+      padding-top: 4rem;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      transition: right 0.3s ease;
+      z-index: 1000;
+    }
+
+    .sidebar.active {
+      right: 0;
+    }
+
+    .sidebar h3 {
+      padding-left: 1.5rem;
+      margin-top: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar ul li {
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #fab1a0;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      display: none;
+      z-index: 999;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    .content {
+      margin: 2rem;
+      padding-top: 1rem;
+      text-align: center;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background-color: white;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      width: 85%;
+      max-width: 400px;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .chatbot-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #f0932b;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    h3 {
+      color: #2d3436;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="title">📚 Lesson Hub</div>
+  <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+</header>
+
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<!-- Sidebar now opens from the RIGHT -->
+<div class="sidebar" id="sidebar">
+  <h3>📖 Chapters</h3>
+  <ul>
+    <li>Chapter 1: Introduction</li>
+    <li>Chapter 2: Concepts</li>
+    <li>Chapter 3: Applications</li>
+    <li>Chapter 4: Case Studies</li>
+    <li>Chapter 5: Revision</li>
+  </ul>
+</div>
+
+<div class="content">
+  <h3>What would you like to explore?</h3>
+  <div class="options">
+    <div class="card">📘 Chapter Explanation</div>
+    <div class="card">🎬 Video Lesson</div>
+    <div class="card">📄 Summary</div>
+    <div class="card">📝 Notes</div>
+    <div class="card">🧠 Pre-Assessment Quiz</div>
+  </div>
+</div>
+
+<!-- Floating Chatbot Button -->
+<button class="chatbot-button" title="ChatBot Help">💬</button>
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>

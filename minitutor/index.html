@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MiniTutor – Welcome</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 MiniTutor</h1>
+    <p>Learn with fun! Personalized AI lessons for kids aged 4–10</p>
+
+    <label for="name">👧 What's your name?</label>
+    <input type="text" id="name" placeholder="Enter your name" required />
+
+    <label for="age">🎂 Your Age:</label>
+    <input type="number" id="age" min="4" max="10" placeholder="4 - 10" required />
+
+    <label for="subject">📚 Choose a Subject:</label>
+    <select id="subject">
+      <option value="Computer">Computer Science</option>
+      <option value="Social">Social Studies</option>
+      <option value="GK">General Knowledge</option>
+      <option value="Science">Science</option>
+      <option value="Math">Mathematics</option>
+    </select>
+
+    <button onclick="startLesson()">🧠 Start Learning</button>
+  </div>
+
+  <script>
+    function startLesson() {
+      const name = document.getElementById("name").value.trim();
+      const age = parseInt(document.getElementById("age").value);
+      const subject = document.getElementById("subject").value;
+
+      if (!name || isNaN(age) || age < 4 || age > 10) {
+        alert("Please enter a valid name and an age between 4 and 10.");
+        return;
+      }
+
+      // Save to localStorage
+      localStorage.setItem("name", name);
+      localStorage.setItem("age", age);
+      localStorage.setItem("subject", subject);
+
+      // Redirect to dashboard
+      window.location.href = "dashboard.html";
+    }
+  </script>
+</body>
+</html>
